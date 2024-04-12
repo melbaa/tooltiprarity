@@ -1,0 +1,6 @@
+## Interface: 11200
+## Title: tooltiprarity
+## Notes: none
+## Author: melba
+## SavedVariablesPerCharacter:
+tooltiprarity.lua
