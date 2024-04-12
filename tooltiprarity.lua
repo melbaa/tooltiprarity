@@ -1,9 +1,9 @@
 local tooltip = CreateFrame("Frame", "tooltiprarity", GameTooltip)
 
 local rarity = {
-    "poor", 
-    "common", 
-    "uncommon", 
+    "poor",
+    "common",
+    "uncommon",
     "rare",
     "epic",
     "legendary",
@@ -21,5 +21,9 @@ tooltip:SetScript("OnShow", function()
     end
 
     local itemName, _, itemRarity = GetItemInfo(itemLink)
-    GameTooltip:AddLine("item is " .. rarity[itemRarity], 1, 1, 1)
+    local raritytxt = 'unknown'
+    if itemRarity ~= nil then
+        raritytxt = rarity[itemRarity+1]
+    end
+    GameTooltip:AddLine("item is " .. raritytxt , 1, 1, 1)
 end)
