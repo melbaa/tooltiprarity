@@ -25,5 +25,8 @@ tooltip:SetScript("OnShow", function()
     if itemRarity ~= nil then
         raritytxt = rarity[itemRarity+1]
     end
-    GameTooltip:AddLine("item is " .. raritytxt , 1, 1, 1)
+    -- GameTooltip:AddLine("item is " .. raritytxt , 1, 1, 1)
+    local textleft1=getglobal("GameTooltipTextLeft1");
+    local textleft1txt = textleft1:GetText()
+    textleft1:SetText(textleft1txt .. '   [' .. raritytxt .. ']')
 end)
